@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Neucha&family=Poppins:wght@100&family=Source+Sans+Pro:wght@300&display=swap');
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+  font-family: 'Neucha', cursive;
+  background-color: #fff;
+}
+.testimonials{
+  width: 100%;
+  min-height: 100vh;
+  padding: 50px 15%;
+  background-color: #333;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+.testimonials::after,
+.testimonials::before{
+  content: " ";
+  position: absolute;
+  width: 700px;
+  height: 700px;
+  border-radius: 50%;
+  background-color: #f39c12;
+}
+.testimonials::after{
+  left: 0%;
+  bottom: 0%;
+  transform: translate(-50%, 50%);
+}
+.testimonials::before{
+  right: 0%;
+  bottom: 0%;
+  transform: translate(50%, 50%);
+}
+
+.testimonials > h2{
+  font-size: 29px;
+  margin-bottom: 27px;
+  position: relative;
+}
+.testimonials > h2::after{
+  content: " ";
+  position: absolute;
+  width: 90px;
+  height: 4px;
+  background-color: #f39c12;
+  border-radius: 10px;
+  left: 0;
+  bottom: -6px;
+}
+.testimonials > p{
+  font-size: 16px;
+  max-width: 530px;
+  opacity: .8;
+  line-height: 26px;
+}
+.cards{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 50px;
+  margin-top: 25px;
+  position: relative;
+  z-index: 99;
+  text-align: center;
+}
+.card{
+  padding: 50px 40px;
+  background-color: rgba(255, 255, 255, 0.185);
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 45px rgba(51, 51, 51, 0.501);
+  transition: all .4s ease;
+}
+.card:hover{
+  background-color: rgba(255, 255, 255, 0.811);
+  color: #333;
+  transform: scale(1.06);
+}
+.card img{
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #f39c12;
+}
+.card h3{
+  font-size: 18px;
+  margin-top: 10px;
+  color: #f39c12;
+}
+.card h4{
+  font-size: 16px;
+  font-weight: 500;
+  opacity: .9;
+  margin-top: 2px;
+}
+.card p{
+  font-size: 15px;
+  opacity: .8;
+  line-height: 25px;
+  margin-top: 10px;
+}
+.ratings{
+  margin: 4px 0 16px 0;
+}
+.ratings .uil{
+  font-size: 23px;
+  /* color: #f39c12; */
+}
+
+@media (max-width: 1024px){
+  .testimonials{
+    padding: 50px 7%;
+  }
+}
+
+@media (max-width: 768px) {
+  .testimonials{
+    padding: 50px 3%;
+  }
+  .cards {
+    grid-gap: 15px;
+  }
+}
+@media (max-width: 425px){
+  .cards {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .testimonials::after, .testimonials::before{
+    top: -5px;
+  }
+}
+@media (max-width: 375px){
+.about_section{
+  padding: 50px 4%;
+}
+}
